@@ -1,9 +1,7 @@
 import express from 'express'
+import { getUser } from '../controllers/user.js'
 
 const router = express.Router()
-
-router.get("/teste", (req, res) => {
-    res.status(200).json({msg:"funcionando"})
-})
+router.get("/teste", getUser)
 
 export default router
